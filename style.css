@@ -1,0 +1,21 @@
+
+p{
+    color: black;
+    font-size: 20px;
+}
+b{
+    text-align: center;
+    vertical-align: middle;
+}
+li{
+    list-style-type: none;
+    font-size: 20px;
+    
+}
+li:hover{
+    background-color:rgb(255, 251, 22);
+}
+.container .bg-sieunhan{
+    border: 2px solid black;
+}
+    

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Height (in cm)</p>
+
+    <input type="number" id="height">
+
+    <p>Weight (in kg)</p>
+
+    <input type="number" id="weight">
+
+    <button id="btn" onclick=btnClick()>Calculate</button>
+
+    <div id="result"></div>
+    <script >
+        var aheight = document.getElementById("height")
+var aweight = document.getElementById("weight")
+
+function btnClick() {
+    var height = aheight.value/100;
+    var weight = aweight.value;
+    BMI = weight/(height*height)
+    console.log(BMI)
+    document.getElementById("result").innerHTML = BMI;
+    var chuanDoan;
+    var nguyCo;
+if(BMI<18.5){
+    chuanDoan = "Hơi gầy" 
+    nguyCo = "Nguy cơ thấp"
+}else{
+    if(BMI<24.9){
+        chuanDoan = "Bình thường"
+        nguyCo = " Trung Bình"
+}else {
+    if(BMI<29.9){
+        chuanDoan = "Hơi béo"
+        nguyCo = "Cao"
+}else{
+    if(BMI<34.9){
+        chuanDoan = "Béo phì cấp độ 1"
+        nguyCo = "Cao"
+}else{
+    if(BMI<39.9){
+        chuanDoan = "Béo phì cấp độ 2"
+        nguyCo = "Rất cao"
+    }else{
+        chuanDoan = "Béo phì cấp độ 3"
+        nguyCo = "Nguy Hiểm"
+    }
+}
+}
+}
+}
+document.getElementById("result").innerHTML ="Chỉ số " + chuanDoan + ',Nguy cơ phát bệnh:' + nguyCo;
+}
+
+
+    </script>
+</body>
+</html>
